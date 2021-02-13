@@ -1,7 +1,22 @@
 .navbar img {
     height: 70px;
-}pm
-a :hover, .hov :hover{
-    background-color: lightcoral;
+}
+.bg-beige {
+    background-color: #f4c2c2;
+}
 
+.nav-link:hover {
+    border-bottom: 1px white solid;
+    color: white;
+}
+.logo img {
+    height: 80px;
+}
+.btn-darkred{
+   color: white;
+    background-color: brown;
+    padding: 12px;
+}
+.btn-darkred:hover{
+    color: white;
 }

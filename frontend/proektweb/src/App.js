@@ -69,9 +69,6 @@ class App extends React.Component {
 
     addBear = (newBear) => {
         BearsService.addBear(newBear);
-
-
-
     };
 
     editBear = (bear, bearName) => {

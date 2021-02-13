@@ -1,59 +1,20 @@
-.sidebar{
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 460px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #FFBAA0; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    border-right-color: #FFBAA0;
-    border-right-width: 300px;
-    margin-top: 88px;
-    background-image: url("aeee5ed8bfcd47f2c85315e4d0a5b3d8.png"), url("rainbow2.png");
-    background-position: right top, -5000% 135%;
-    background-repeat: no-repeat, no-repeat;
-
-
-
-}
-.mycalendar{
-    margin-top: 80px;
-
-
-}
-.sidebar-right{
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 460px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    right: 0;
-    background-color: #FFBAA0; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    margin-top: 88px;
-    background-image: url("aeee5ed8bfcd47f2c85315e4d0a5b3d8.png"), url("rainbow2.png");
-    background-position: right top, -7000% 135%;
-    background-repeat: no-repeat, no-repeat;
-}
-.create_kopce{
-
-    margin-top: 80px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.myshadow{
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-}
-.objasnuvanje
-{
-    background-color: #bd6edb;
+@media screen and (max-width: 1600px){
+    .headImage{
+        width: 1600px;
+    }
 }
 
-h1 {
-color: blueviolet;
+.createCircle{
+height: 500px;
 }
-
+.orderJoinCircle{
+height: 300px;
+}
+.circles {
+    height: 500px;
+}
+.hline {
+    background: linear-gradient(.25turn, #ffd1ce, #a52a2a, #ffd1ce);
+    border:0;
+    height:3px;
+}

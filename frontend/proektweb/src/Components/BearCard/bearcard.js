@@ -31,7 +31,7 @@ class BearCard extends Component {
 
         return (
 
-                <div className="card cardw">
+                <div className="card cardw mt-5">
                     <div>
                         {this.cardHeader()}
                         {this.animalBear()}
@@ -83,7 +83,6 @@ class BearCard extends Component {
             </div>);
     }
     colorBear() {
-debugger;
         return (
             <div className="gol">
                 <div className="row d-flex justify-content-around">
@@ -145,7 +144,7 @@ debugger;
     grade() {
        if (this.props.kopcinja.rate === true) {
            return (
-               <div className="gol">
+               <div className="gol card-body">
 
                    <div className="">
                        <Link className="btn fa fa-star btn-outline-danger my-2 my-sm-0"
@@ -154,7 +153,7 @@ debugger;
                </div>);
        } else if(this.props.kopcinja.edit === true){
            return (
-               <div className="gol">
+               <div className="gol card-body">
                    <div className="d-flex justify-content-around">
                        <div className="row d-flex justify-content-around border border-danger w-75">
                        <div className="col-md-6">
@@ -185,7 +184,7 @@ debugger;
     Crud() {
         if (this.props.kopcinja.crud === true){
             return (
-                <div className="gol">
+                <div className="gol card-body">
                     <div className="row d-flex justify-content-around">
                         <div className="col-md-6">
                             <div className="">
