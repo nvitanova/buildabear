@@ -8,6 +8,7 @@ import Join from "./join.png";
 import Create from "./create.png";
 import Order from "./order.png";
 import BearCard from "../BearCard/bearcard";
+import More from "./more.png";
 
 
 
@@ -48,7 +49,8 @@ class HomePage extends Component {
                 <hr className="hline" />
             <div className="row d-flex justify-content-around">
 
-                {this.props.bears.map(bear =>
+                {this.props.bears.slice(0,3).map(bear =>
+
                     <div className="" key={bear.name}>
 
                         <BearCard name={bear.name}
@@ -66,7 +68,9 @@ class HomePage extends Component {
 
 
 
+
             </div>
+                <Link to={"/explore"}><img src={More} className="morePhoto mt-xl-5"/></Link>
             </div>
         </div>
 

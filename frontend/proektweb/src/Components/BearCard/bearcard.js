@@ -32,18 +32,19 @@ class BearCard extends Component {
         return (
 
                 <div className="card cardw mt-5">
-                    <div>
+
                         {this.cardHeader()}
                         {this.animalBear()}
                         {this.colorBear()}
                         {this.sizeBear()}
+                        <div className="row">
                         {this.clothesBear()}
                         {this.additionsBear()}
+                        </div>
                         {this.creator()}
                         {this.grade()}
                         {this.Crud()}
-                        <hr/>
-                    </div>
+
                 </div>
 
         );

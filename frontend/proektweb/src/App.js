@@ -18,6 +18,7 @@ import ClothesAdd from "./Components/Clothes/ClothesAdd"
 import MakeOrder from "./Components/Order/makeOrder";
 import BearsService from "./Repository/axiosRepository";
 import BearOrdered from "./Components/Order/BearOrdered";
+import Footer from "./Components/Footer/Footer";
 
 
 
@@ -159,6 +160,7 @@ class App extends React.Component {
                 <BearOrdered {...props}/>}>
             </Route>
             <Redirect to={"/"}/>
+            <Footer/>
         </Router>
 
 
