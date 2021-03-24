@@ -131,7 +131,7 @@ class BearAdd extends Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container mt-5">
                 <form className="card-header bg-danger rounded-bottom" id="add-form" onSubmit={this.handleSubmit}>
                     <h4 className="text-upper text-left">Add Bear</h4>
                     <div className="form-group row">

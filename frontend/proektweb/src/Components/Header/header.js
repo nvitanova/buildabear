@@ -10,7 +10,7 @@ class Header extends Component{
         return(
         <header>
 
-            <nav className="navbar fixed-top navbar-expand-lg bg-beige text-danger rounded-bottom">
+            <nav className="navbar fixed-top navbar-expand-lg bg-beige text-danger">
                 <div className="logo">
                     <Link to={"/"} class="mr-4"><img src={Teddy} className=""/></Link>
                 </div>
@@ -19,7 +19,8 @@ class Header extends Component{
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="ToggleNavigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse d-flex justify-content-lg-between" id="navbarSupportedContent">
+                    <div>
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item">
                             <Link className="navbar-brand nav-link text-darkred" to={"/"}>Home</Link>
@@ -35,10 +36,12 @@ class Header extends Component{
                             <Link className="navbar-brand nav-link text-darkred" to={"/opinions"}>Opinions</Link>
                         </li>
                     </ul>
-                    <form className="hov">
+                    </div>
+                    <div className={"m-3"}>
+                    <div className="hov">
                         <Link className="btn-darkred" to={"/login"}>Log in</Link>
-                    </form>
-
+                    </div>
+                    </div>
                 </div>
             </nav>
 

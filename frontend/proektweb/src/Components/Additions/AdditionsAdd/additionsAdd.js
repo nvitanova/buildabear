@@ -23,7 +23,7 @@ const additionsAdd  = (props) => {
 
 
         return (
-            <div className="container">
+            <div className="container ">
                 <form className="card-header bg-danger rounded-bottom" id="add-form" onSubmit={handleSubmit}>
                     <h4 className="text-upper text-left">Add Additions</h4>
                     <div className="form-group row">

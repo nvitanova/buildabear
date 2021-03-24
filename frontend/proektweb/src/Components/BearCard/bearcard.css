@@ -1,6 +1,6 @@
 .cardw {
-    width: 320px;
-    height: 650px;
+    width: 420px;
+
 }
 /*.gol {*/
 /*    padding: 15px;*/
@@ -8,4 +8,23 @@
 
 div .orderBut{
     float: right;
+}
+.w-same {
+    width: 35px;
+    height: 35px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.card > li > .card{
+    padding-left: 1.0em;
+}
+.card li:before {
+    content: "\f12e"; /* FontAwesome Unicode */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -1.0em; /* same as padding-left set on li */
+    width: 1.0em; /* same as padding-left set on li */
 }

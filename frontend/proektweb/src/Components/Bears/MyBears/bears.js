@@ -26,10 +26,10 @@ class Bears extends Component {
 
         return(
             <div className="container">
-                <div className="row d-flex justify-content-around">
+                <div className=" row mt-5 d-flex justify-content-around">
 
                         {this.props.bears.map((bear) =>
-                            <div className="" key={bear.name}>
+                            <div className="col-auto" key={bear.name}>
 
                                 <BearCard className="pb-3"  name={bear.name}
                                           animal={bear.animal}

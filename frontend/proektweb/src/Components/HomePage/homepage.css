@@ -1,14 +1,16 @@
 @media screen and (max-width: 1600px){
-    .headImage{
-        width: 1600px;
-    }
+    /*.headImage{*/
+    /*    width: 1600px;*/
+    /*}*/
 }
 
 .createCircle{
 height: 500px;
+
 }
 .orderJoinCircle{
 height: 300px;
+
 }
 .circles {
     height: 500px;

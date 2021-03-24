@@ -31,20 +31,22 @@ class Explore extends Component{
 
         return(
             <div className="container">
-                <div className="row d-flex justify-content-around">
+                <div className=" row mt-5 d-flex justify-content-around">
 
-                    {this.props.bears.map(bear =>
-                        <div className="" key={bear.name}>
+                    {this.props.bears.map((bear) =>
+                        <div className="col-auto" key={bear.name}>
 
-                            <BearCard name={bear.name}
+                            <BearCard className="pb-3"  name={bear.name}
                                       animal={bear.animal}
                                       color={bear.color}
                                       size={bear.size}
                                       creator={bear.creator.username}
                                       obleka={bear.obleka}
-                                      // addOn={this.handleAdditions}
                                       additions={bear.additions}
-                                      kopcinja={this.state.kopcinja}/>
+                                      kopcinja={this.state.kopcinja}
+                            />
+
+
 
                         </div>
                     )}

@@ -37,7 +37,7 @@ class BearCard extends Component {
                         {this.animalBear()}
                         {this.colorBear()}
                         {this.sizeBear()}
-                        <div className="row">
+                        <div className="row d-flex justify-content-center">
                         {this.clothesBear()}
                         {this.additionsBear()}
                         </div>
@@ -53,7 +53,7 @@ class BearCard extends Component {
 
     cardHeader() {
         return (
-            <div className="card-header bg-danger">
+            <div className="card-header bg-dark">
                 <div className="row ">
 
 
@@ -61,7 +61,7 @@ class BearCard extends Component {
                     <div className="col-md-6 font-weight-bolder text-xl-center text-white ">
                         {this.props.name}
                     </div>
-                    <Link className="btn fa btn-info my-2 my-sm-0 orderBut" to={"/createOrder/" + this.props.name }><i className="">Order</i></Link>
+                    <Link className="btn col-auto px-3 fa btn-info my-2 my-sm-0 orderBut" to={"/createOrder/" + this.props.name }><i className="">Order</i></Link>
 
 
 
@@ -73,7 +73,7 @@ class BearCard extends Component {
     animalBear() {
 
         return (
-            <div className="gol">
+            <div className="gol mt-4">
                 <div className="row d-flex justify-content-around">
                     <div className="col-md-6 ">
                         Type: {this.props.animal}
@@ -85,7 +85,7 @@ class BearCard extends Component {
     }
     colorBear() {
         return (
-            <div className="gol">
+            <div className="gol mt-4">
                 <div className="row d-flex justify-content-around">
                     <div className="col-md-6">
                         Color: {this.props.color}
@@ -96,50 +96,51 @@ class BearCard extends Component {
             </div>);
     }
     sizeBear() {
-
+        let sizes = ["XS", "S", "M", "L", "XL"];
         return (
-            <div className="gol">
-                <div className="row d-flex justify-content-around">
-                    <div className="col-md-6">
-                        Size: {this.props.size}
+                    <div className={"mt-4"}>
+                    <div >Size:</div>
+                    <div className=" mt-3 d-flex justify-content-around">
+                        {sizes.map(item =>
+                            <div className={item === this.props.size ? "rounded bg-dark text-white w-same border border-dark border-3" : "rounded w-same border border-dark border-3"}>{item}</div>
+                        )}
                     </div>
-
-
-                </div>
-            </div>);
+                    </div>
+        );
     }
     clothesBear() {
 
         return (
-            <div className="gol">
-                <div className="row d-flex justify-content-around">
-                    <div className="col-md-6">
+            <div className={"mt-4 col-auto "}>
+                <div className={"card"}>
+                    <div className={"card-header  bg-info"}>
                         Clothes:
-                        <div className="border border-info">
-                            {this.props.obleka.color} {" "}
-                            {this.props.obleka.type} {" "}
-                            with {" "}
-                            {this.props.obleka.decoration}
-                        </div>
                     </div>
-
-
+                    <div className={"card-body "}>
+                        {this.props.obleka.color} {this.props.obleka.type} with {this.props.obleka.decoration}
+                    </div>
                 </div>
-            </div>);
+            </div>
+            );
     }
     additionsBear() {
 
         return (
-            <div className="gol">
-                <div className="row d-flex justify-content-around">
-                    <div className="col-md-6">
-
-                        Add-ons: {this.handleAdditions(this.props.additions)}
+            <div className={"mt-4 col-auto "}>
+                <div className={"card"}>
+                    <div className={"card-header text-white bg-danger"}>
+                        Additions:
                     </div>
-
-
+                    <div className={"card-body bg-white"}>
+                        <ul >
+                            {this.props.additions.map(addon =>
+                                <li className={"mr-2"}>{addon.color} {addon.type}</li>
+                            )}
+                        </ul>
+                    </div>
                 </div>
-            </div>);
+            </div>
+            );
     }
 
     grade() {
@@ -155,25 +156,18 @@ class BearCard extends Component {
        } else if(this.props.kopcinja.edit === true){
            return (
                <div className="gol card-body">
-                   <div className="d-flex justify-content-around">
-                       <div className="row d-flex justify-content-around border border-danger w-75">
-                       <div className="col-md-6">
-                           Grade: {this.props.grade}
-                           <StarRatings starDimension="20px"
-                                        starSpacing="3px"
+                   <div className="">
+                       <div className="">
+                       <div className="">
+                           <div >My Grade:</div>
+                           <StarRatings starDimension="30px"
+                                        starSpacing="6px"
                                         starRatedColor="red"
                                         rating={this.props.grade}/>
                        </div>
-
-
-
                    </div>
                    </div>
-
-
-
-
-                   <div className="row d-flex justify-content-center">
+                   <div className="mt-3">
                        <Link className="btn fa fa-star btn-outline-danger my-2 my-sm-0"
                              to={"/opinions/" + this.props.name + "/editOpinion"}><i className="">Edit</i></Link>
                        <Link className="btn text-center fa fa-trash btn-outline-danger text-upper " to={"/opinions/" + this.props.name + "/delete"}>Delete</Link>
@@ -185,11 +179,11 @@ class BearCard extends Component {
     Crud() {
         if (this.props.kopcinja.crud === true){
             return (
-                <div className="gol card-body">
-                    <div className="row d-flex justify-content-around">
-                        <div className="col-md-6">
+                <div className="">
+                    <div className="">
+                        <div className="mt-3">
                             <div className="">
-                                <Link className="btn fa fa-plus btn-outline-danger my-2 my-sm-0" to={"/mybears/add"}><i className=""/></Link>
+                                <Link className="btn fa fa-plus btn-outline-danger my-2 ml-2 my-sm-0" to={"/mybears/add"}><i className=""/></Link>
                                 <Link className="btn fa fa-pencil btn-outline-danger my-2 my-sm-0" to={"/mybears/" + this.props.name + "/edit"}><i className=""/></Link>
                                 <Link className="btn fa fa-trash btn-outline-danger my-2 my-sm-0" to={"/mybears/" + this.props.name + "/delete"}><i className=""/></Link>
 
@@ -205,7 +199,7 @@ class BearCard extends Component {
     }
     creator() {
         return (
-            <div className="gol">
+            <div className="mt-4 gol">
                 <div className="row d-flex justify-content-around">
                     <div className="col-md-6">
                         Creator: {this.props.creator}

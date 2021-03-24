@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "./Components/Header/header";
+import bootstrap from 'bootstrap';
 import './App.css';
 import Bears from "./Components/Bears/MyBears/bears";
 import {BrowserRouter as Router, Redirect, Route} from 'react-router-dom'
@@ -111,6 +112,7 @@ class App extends React.Component {
     const routing = (
         <Router>
           <Header/>
+
             <Route exact path={"/"} render={()=>
                 <HomePage bears={this.state.exploreBears} date = {this.state.date}/>}>
             </Route>
@@ -160,6 +162,7 @@ class App extends React.Component {
                 <BearOrdered {...props}/>}>
             </Route>
             <Redirect to={"/"}/>
+
             <Footer/>
         </Router>
 
