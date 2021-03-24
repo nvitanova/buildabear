@@ -6,7 +6,7 @@
   "dependencies": {
     "@ishawnwang/withunmounted": "^1.0.1",
     "@popperjs/core": "^2.6.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
