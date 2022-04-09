@@ -10,7 +10,7 @@
     "bootstrap": "^5.0.0-beta2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "popper.js": "^1.16.1",
     "qs": "latest",
     "react": "^16.12.0",
