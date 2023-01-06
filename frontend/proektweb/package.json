@@ -24,7 +24,7 @@
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-router-hash-history": "git+https://github.com/ymzuiku/react-router-hash-history.git",
-    "react-scripts": "0.9.5",
+    "react-scripts": "5.0.1",
     "react-select": "^3.0.8",
     "react-star-ratings": "^2.3.0"
   },
